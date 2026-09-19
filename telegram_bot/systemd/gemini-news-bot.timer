@@ -1,0 +1,16 @@
+[Unit]
+Description=Gemini News Bot Timer - 定時自動推播即時新聞
+Requires=gemini-news-bot.service
+
+[Timer]
+# 系統開機後 1 分鐘開始首次執行
+OnBootSec=1min
+
+# 設定定時週期：例如每 1 小時執行一次 (亦可設定為每日固定時間，如 OnCalendar=*-*-* 08:30:00)
+OnUnitActiveSec=1h
+
+# 若錯過執行時間（如關機），開機後自動補執行
+Persistent=true
+
+[Install]
+WantedBy=timers.target

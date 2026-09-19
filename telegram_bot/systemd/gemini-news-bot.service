@@ -1,0 +1,20 @@
+[Unit]
+Description=Gemini News Bot - 科技即時新聞自動推播服務
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+# 請根據您的 Linux / 樹莓派使用者名稱進行修改 (例如 pi, ubuntu 等)
+User=pi
+WorkingDirectory=/home/pi/gemini-agent-toolkit
+Environment="PATH=/home/pi/gemini-agent-toolkit/.venv/bin:/usr/local/bin:/usr/bin:/bin"
+ExecStart=/home/pi/gemini-agent-toolkit/.venv/bin/python /home/pi/gemini-agent-toolkit/telegram_bot/app_news_broadcast_bot.py
+
+# 日誌輸出至 systemd journal
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=gemini-news-bot
+
+[Install]
+WantedBy=multi-user.target

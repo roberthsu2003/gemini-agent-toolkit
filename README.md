@@ -14,9 +14,8 @@
 Telegram 是串接大語言模型與 AI Agent 最輕量、好寫且開發體驗極佳的通訊管道（免 Webhook/伺服器、支援本機 Polling 輪詢快速測試、30 秒極速申請 Token）。
 
 👉 **完整教學與範例程式碼請參閱專屬章節**：[**【📱 Telegram Bot 連線方式與機器人開發】**](./telegram_bot/README.md)
-- [`basic_bot.py`](./telegram_bot/basic_bot.py)：Telegram 基礎連線與 Echo 文字回覆範例
-- [`gemini_bot.py`](./telegram_bot/gemini_bot.py)：串接 Gemini 3.7 Flash Interactions API 的智慧對話助理
-- [`README.md`](./telegram_bot/README.md)：Token 申請、Polling/Webhook 部署考量與完整開發手冊
+- **基礎教學**：[`01_basic_bot.py`](./telegram_bot/01_basic_bot.py)（基礎 Echo 機器人）、[`02_gemini_bot.py`](./telegram_bot/02_gemini_bot.py)（Gemini 3.7 AI 私聊）、[`03_broadcast_message.py`](./telegram_bot/03_broadcast_message.py)（全方位主動推播）、[`04_rich_broadcast.py`](./telegram_bot/04_rich_broadcast.py)（圖文與按鈕推播）、[`05_gemini_sentiment_analysis.py`](./telegram_bot/05_gemini_sentiment_analysis.py)（Gemini 客服情緒分析核心）
+- **實務整合**：[`app_gemini_group_bot.py`](./telegram_bot/app_gemini_group_bot.py)（群組 AI 助理與防洗版）、[`app_news_broadcast_bot.py`](./telegram_bot/app_news_broadcast_bot.py)（聯網焦點新聞推播）、[`app_customer_service_bot.py`](./telegram_bot/app_customer_service_bot.py)（智慧客服與真人告警）、[`app_sentiment_excel_logger.py`](./telegram_bot/app_sentiment_excel_logger.py)（客服日誌每日 Excel 報表）、[`systemd/`](./telegram_bot/systemd/README.md)（Linux/樹莓派定時排程部署）
 
 ---
 
