@@ -181,7 +181,7 @@ print(interaction.output_text)
 #### [7. 函式呼叫 (function_calling)](./function_calling/README.md)
 讓模型連接外部 API 與工具，自動識別意圖、提取參數並執行動作：
 - **核心教學**：[`01_meeting_scheduler.py`](./function_calling/01_meeting_scheduler.py)（會議預約 4 步驟）、[`02_weather_assistant.py`](./function_calling/02_weather_assistant.py)（即時天氣查詢）、[`03_parallel_function_calling.py`](./function_calling/03_parallel_function_calling.py)（多工具平行呼叫）、[`04_multi_tool_search_and_function.py`](./function_calling/04_multi_tool_search_and_function.py)（聯網 + 自訂工具混合）
-- **實務整合**：[`app_telegram_bot.py`](./function_calling/app_telegram_bot.py)（Telegram 工具管家）、[`app_gradio.py`](./function_calling/app_gradio.py)（Gradio 智慧控制台）、[`app_streamlit.py`](./function_calling/app_streamlit.py)（Streamlit 管家儀表板）、[`app_fastapi.py`](./function_calling/app_fastapi.py)（FastAPI 工具 API）
+- **實務整合**：[`app_telegram_bot.py`](./function_calling/app_telegram_bot.py)（Telegram 生活差旅特助）、[`app_telegram_multi_tool_search_bot.py`](./function_calling/app_telegram_multi_tool_search_bot.py)（Telegram 聯網+動作雙核心管家）、[`app_gradio.py`](./function_calling/app_gradio.py)（Gradio 智慧控制台）、[`app_streamlit.py`](./function_calling/app_streamlit.py)（Streamlit 管家儀表板）、[`app_fastapi.py`](./function_calling/app_fastapi.py)（FastAPI 工具 API）
 - **互動筆記**：[`basic_function_calling.ipynb`](./function_calling/basic_function_calling.ipynb)、[`multi_function_calling.ipynb`](./function_calling/multi_function_calling.ipynb)、[`parallel_function_calling.ipynb`](./function_calling/parallel_function_calling.ipynb)、[`chat_function_history.ipynb`](./function_calling/chat_function_history.ipynb)
 
 ---

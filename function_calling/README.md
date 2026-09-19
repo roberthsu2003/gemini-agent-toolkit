@@ -95,6 +95,27 @@ print(response.text)
 ## 4. 聯網搜尋 + 自訂工具混合調用 (`04_multi_tool_search_and_function.py`)
 
 - 核心程式檔案：[`04_multi_tool_search_and_function.py`](./04_multi_tool_search_and_function.py)
+- 實務進階應用：[`app_telegram_multi_tool_search_bot.py`](./app_telegram_multi_tool_search_bot.py)
+
+---
+
+## 📱 實務應用專案：Telegram AI 智慧特助與工具管家
+
+將 Gemini 3.7 Flash 的 Function Calling 能力無縫整合至 Telegram 機器人，讓學生透過真實對話體驗工具調用的震撼效果：
+
+| 應用檔案 | 核心亮點與工具支援 | 執行指令 |
+|---|---|---|
+| [`app_telegram_bot.py`](./app_telegram_bot.py) | **全能生活與差旅特助**：內建四大工具（即時天氣、外幣匯率計算、個人待辦清單持久化、會議預約登記）。支援**平行呼叫 (Parallel Function Calling)**，一句話同時觸發多工具！ | `python function_calling/app_telegram_bot.py` |
+| [`app_telegram_multi_tool_search_bot.py`](./app_telegram_multi_tool_search_bot.py) | **聯網搜尋 + 自訂動作雙核心管家**：同時掛載 Google Search 即時聯網與本地訂位/記帳函式。模型自主決定先上網查資料、再調用本地函式完成操作！ | `python function_calling/app_telegram_multi_tool_search_bot.py` |
+| [`app_gradio.py`](./app_gradio.py) | **Gradio 網頁智慧控制台**：視覺化展示 Function Calling 調用過程與結果。 | `python function_calling/app_gradio.py` |
+| [`app_streamlit.py`](./app_streamlit.py) | **Streamlit AI 智慧管家儀表板**：提供互動式對話視窗與即時工具狀態指示。 | `streamlit run function_calling/app_streamlit.py` |
+| [`app_fastapi.py`](./app_fastapi.py) | **FastAPI 工具 API 端點**：提供後端微服務呼叫介面。 | `python function_calling/app_fastapi.py` |
+
+### 💡 學生最驚艷的測試範例（複製即可在 Telegram 測試）：
+- **多任務平行調用**：
+  > `我明天要帶 3 位客戶去東京洽公，幫我查東京現在天氣，換算 5 萬日圓大概是多少台幣，並幫我預約下週一下午 2 點 4 個人的出差檢討會，順便把『準備出差簡報』加入待辦清單！`
+- **聯網查最新資料 + 本地動作執行**：
+  > `請幫我上網查一下台北信義區目前評分最高的義大利餐廳，並幫我預訂今天晚上 19:00 兩位用餐！`
 
 ---
 
@@ -104,3 +125,4 @@ print(response.text)
 - [`multi_function_calling.ipynb`](./multi_function_calling.ipynb)：多函式自動路由筆記本
 - [`parallel_function_calling.ipynb`](./parallel_function_calling.ipynb)：平行函式呼叫筆記本
 - [`chat_function_history.ipynb`](./chat_function_history.ipynb)：對話歷史與函式呼叫整合筆記本
+

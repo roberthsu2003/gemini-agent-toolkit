@@ -56,7 +56,17 @@ pip install python-telegram-bot python-dotenv google-genai openpyxl pydantic
 
 以基礎篇的模組為基石，擴展為解決真實商業情境的完整應用系統：
 
-### 1. 群組智慧 AI 助理 (`app_gemini_group_bot.py`)
+| 應用專案 | 核心技術與說明 | 完整原始碼連結 |
+|---|---|---|
+| **群組智慧 AI 助理** | 群組 @提及 / 回覆觸發防洗版機制、私聊直接對話。 | [`app_gemini_group_bot.py`](./app_gemini_group_bot.py) |
+| **聯網焦點新聞自動推播** | Google Search 聯網搜尋、HTML/按鈕美化推播、定時排程。 | [`app_news_broadcast_bot.py`](./app_news_broadcast_bot.py) |
+| **智慧客服情緒與告警** | 私聊情緒即時判讀、同理心安撫、緊急客訴自動轉發主管群組。 | [`app_customer_service_bot.py`](./app_customer_service_bot.py) |
+| **客服日誌每日 Excel 報表** | 整合 openpyxl、每日對話與情緒指標自動寫入美化報表。 | [`app_sentiment_excel_logger.py`](./app_sentiment_excel_logger.py) |
+
+---
+
+### 1. 群組智慧 AI 助理（[`app_gemini_group_bot.py`](./app_gemini_group_bot.py)）
+- 📄 **程式碼檔案**：👉 [`app_gemini_group_bot.py`](./app_gemini_group_bot.py)
 - **應用場景**：社群/工作群組智慧秘書。
 - **實務關鍵**：
   - 群組防洗版過濾：在群組中僅在被 `@BotUsername` 提及或回覆訊息時才觸發 AI 回覆。
@@ -68,7 +78,8 @@ pip install python-telegram-bot python-dotenv google-genai openpyxl pydantic
 
 ---
 
-### 2. Gemini 聯網焦點新聞自動推播機器人 (`app_news_broadcast_bot.py`)
+### 2. Gemini 聯網焦點新聞自動推播機器人（[`app_news_broadcast_bot.py`](./app_news_broadcast_bot.py)）
+- 📄 **程式碼檔案**：👉 [`app_news_broadcast_bot.py`](./app_news_broadcast_bot.py)
 - **應用場景**：自動化時事情報發布台、品牌官方頻道晨報推播。
 - **實務關鍵**：
   - **Google Search Grounding**：調用即時聯網工具自主搜尋當日重大焦點新聞與摘要。
@@ -80,7 +91,8 @@ pip install python-telegram-bot python-dotenv google-genai openpyxl pydantic
 
 ---
 
-### 3. 智慧客服情緒辨識與後台真人告警系統 (`app_customer_service_bot.py`)
+### 3. 智慧客服情緒辨識與後台真人告警系統（[`app_customer_service_bot.py`](./app_customer_service_bot.py)）
+- 📄 **程式碼檔案**：👉 [`app_customer_service_bot.py`](./app_customer_service_bot.py)
 - **應用場景**：電商、線上服務平台自動化接待與客訴預警。
 - **運作架構**：
   ```mermaid
@@ -105,7 +117,8 @@ pip install python-telegram-bot python-dotenv google-genai openpyxl pydantic
 
 ---
 
-### 4. 客服通話日誌與每日 Excel 報表自動匯出 (`app_sentiment_excel_logger.py`)
+### 4. 客服通話日誌與每日 Excel 報表自動匯出（[`app_sentiment_excel_logger.py`](./app_sentiment_excel_logger.py)）
+- 📄 **程式碼檔案**：👉 [`app_sentiment_excel_logger.py`](./app_sentiment_excel_logger.py)
 - **應用場景**：客戶關係管理 (CRM)、客服團隊服務品質考核與客訴回溯。
 - **實務關鍵**：
   - 整合 `openpyxl`，每日自動建立/累加 `chat_logs/YYYY-MM-DD.xlsx`。
