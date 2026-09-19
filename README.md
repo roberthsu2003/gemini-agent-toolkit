@@ -13,7 +13,7 @@
 
 Telegram 是串接大語言模型與 AI Agent 最輕量、好寫且開發體驗極佳的通訊管道（免 Webhook/伺服器、支援本機 Polling 輪詢快速測試、30 秒極速申請 Token）。
 
-👉 **完整教學與範例程式碼請參閱專屬章節**：[**【📱 Telegram Bot 連線方式與機器人開發】(./telegram_bot)**](./telegram_bot)
+👉 **完整教學與範例程式碼請參閱專屬章節**：[**【📱 Telegram Bot 連線方式與機器人開發】**](./telegram_bot/README.md)
 - [`basic_bot.py`](./telegram_bot/basic_bot.py)：Telegram 基礎連線與 Echo 文字回覆範例
 - [`gemini_bot.py`](./telegram_bot/gemini_bot.py)：串接 Gemini 3.7 Flash Interactions API 的智慧對話助理
 - [`README.md`](./telegram_bot/README.md)：Token 申請、Polling/Webhook 部署考量與完整開發手冊
@@ -137,18 +137,18 @@ print(interaction.output_text)
 
 ### 🔰 第一階段：基礎互動與多模態體驗（建立成就感）
 
-#### [1. 文字生成 (text_generation)](./text_generation)
+#### [1. 文字生成 (text_generation)](./text_generation/README.md)
 劃分「Gemini 核心功能指南（純 Python 教學）」與「實務應用整合實戰（Telegram / Gradio / Streamlit / FastAPI）」雙層架構：
 - **核心教學**：[`01_basic_text.py`](./text_generation/01_basic_text.py)（文字生成）、[`02_thinking_mode.py`](./text_generation/02_thinking_mode.py)（思考深度）、[`03_system_and_params.py`](./text_generation/03_system_and_params.py)（系統指示詞與參數）、[`04_multimodal_image.py`](./text_generation/04_multimodal_image.py)（多模態圖文）、[`05_streaming.py`](./text_generation/05_streaming.py)（即時串流）、[`06_stateful_chat.py`](./text_generation/06_stateful_chat.py)（狀態化對話）、[`07_stateless_chat.py`](./text_generation/07_stateless_chat.py)（無狀態對話）
 - **實務整合**：[`app_telegram_bot.py`](./text_generation/app_telegram_bot.py)（Telegram Bot）、[`app_gradio.py`](./text_generation/app_gradio.py)（Gradio Web UI）、[`app_streamlit.py`](./text_generation/app_streamlit.py)（Streamlit 儀表板）、[`app_fastapi.py`](./text_generation/app_fastapi.py)（FastAPI 後端與 SSE 串流）
 - **互動筆記**：[`text_generation_quickstart.ipynb`](./text_generation/text_generation_quickstart.ipynb)、[`trip_planner_system_instruction.ipynb`](./text_generation/trip_planner_system_instruction.ipynb)
 
-#### [2. 圖像生成 (image_generation)](./image_generation)
+#### [2. 圖像生成 (image_generation)](./image_generation/README.md)
 使用 Google Imagen 3 (`imagen-3.0-generate-002`) 與 `gemini-2.5-flash-image` 進行 Text-to-Image 生成與 Prompt 擴寫工作流：
 - **核心教學**：[`01_text_to_image.py`](./image_generation/01_text_to_image.py)（基礎生圖）、[`02_aspect_ratio.py`](./image_generation/02_aspect_ratio.py)（比例控制）、[`03_gemini_flash_image.py`](./image_generation/03_gemini_flash_image.py)（Gemini 生圖）、[`04_prompt_enhancer.py`](./image_generation/04_prompt_enhancer.py)（Prompt 智慧擴寫）
 - **實務整合**：[`app_telegram_bot.py`](./image_generation/app_telegram_bot.py)（Telegram 算圖 Bot）、[`app_gradio.py`](./image_generation/app_gradio.py)（Gradio 畫廊工作台）、[`app_streamlit.py`](./image_generation/app_streamlit.py)（Streamlit 生圖室）、[`app_fastapi.py`](./image_generation/app_fastapi.py)（FastAPI 產圖 API）
 
-#### [3. 文件理解 (document_understanding)](./document_understanding)
+#### [3. 文件理解 (document_understanding)](./document_understanding/README.md)
 原生多模態 PDF 視覺理解（支援達 1000 頁 / 50MB），涵蓋 Inline、Files API、跨文件比對與 Context Caching 快取：
 - **核心教學**：[`01_inline_pdf_summary.py`](./document_understanding/01_inline_pdf_summary.py)（Inline 摘要）、[`02_files_api_pdf_chat.py`](./document_understanding/02_files_api_pdf_chat.py)（Files API 多輪問答）、[`03_remote_pdf_analysis.py`](./document_understanding/03_remote_pdf_analysis.py)（URL 下載研讀）、[`04_multi_pdf_comparison.py`](./document_understanding/04_multi_pdf_comparison.py)（跨文件比對）、[`05_pdf_structured_extraction.py`](./document_understanding/05_pdf_structured_extraction.py)（Pydantic 規格萃取）、[`06_pdf_context_caching.py`](./document_understanding/06_pdf_context_caching.py)（Context Caching 快取）
 - **實務整合**：[`app_telegram_bot.py`](./document_understanding/app_telegram_bot.py)（Telegram PDF 助理）、[`app_gradio.py`](./document_understanding/app_gradio.py)（Gradio 研讀工作台）、[`app_streamlit.py`](./document_understanding/app_streamlit.py)（Streamlit 知識庫問答）、[`app_fastapi.py`](./document_understanding/app_fastapi.py)（FastAPI 分析端點）
@@ -158,7 +158,7 @@ print(interaction.output_text)
 
 ### ⚙️ 第二階段：工程化與資料約束（應用開發必備）
 
-#### [4. 結構化輸出 (structure_output)](./structure_output)
+#### [4. 結構化輸出 (structure_output)](./structure_output/README.md)
 強制約束模型輸出嚴格符合 JSON Schema 或 Pydantic 模型，涵蓋條件多態 (`Union`)、遞迴樹狀結構與列舉：
 - **核心教學**：[`01_pydantic_basic.py`](./structure_output/01_pydantic_basic.py)（Pydantic 基礎）、[`02_advanced_schemas.py`](./structure_output/02_advanced_schemas.py)（遞迴樹狀與 Enum）、[`03_currency_exchange.py`](./structure_output/03_currency_exchange.py)（匯率文字轉數據）
 - **實務整合**：[`app_telegram_bot.py`](./structure_output/app_telegram_bot.py)（Telegram 結構化提取）、[`app_gradio.py`](./structure_output/app_gradio.py)（Gradio 表格轉換器）、[`app_streamlit.py`](./structure_output/app_streamlit.py)（Streamlit CSV 下載工具）、[`app_fastapi.py`](./structure_output/app_fastapi.py)（FastAPI 強型別 API）
@@ -168,18 +168,18 @@ print(interaction.output_text)
 
 ### 🛠️ 第三階段：外掛能力與工具整合（突破 LLM 限制）
 
-#### [5. 聯網搜尋 (ground_search)](./ground_search)
+#### [5. 聯網搜尋 (ground_search)](./ground_search/README.md)
 啟用 Google Search Grounding 讓模型自主聯網搜尋最新即時資訊，自動標註來源網址：
 - **核心教學**：[`01_basic_search.py`](./ground_search/01_basic_search.py)（基礎聯網）、[`02_search_citations.py`](./ground_search/02_search_citations.py)（引用來源解析）、[`03_search_with_code_execution.py`](./ground_search/03_search_with_code_execution.py)（聯網 + Python 運算）、[`04_search_structured_output.py`](./ground_search/04_search_structured_output.py)（聯網 + 結構化輸出）
 - **實務整合**：[`app_telegram_bot.py`](./ground_search/app_telegram_bot.py)（Telegram 查證 Bot）、[`app_gradio.py`](./ground_search/app_gradio.py)（Gradio 來源查核）、[`app_streamlit.py`](./ground_search/app_streamlit.py)（Streamlit 時事情報）、[`app_fastapi.py`](./ground_search/app_fastapi.py)（FastAPI 搜尋端點）
 
-#### [6. 程式碼執行 (code_execution)](./code_execution)
+#### [6. 程式碼執行 (code_execution)](./code_execution/README.md)
 模型自主在 Google 託管的 Python 安全沙盒中編寫並執行程式碼，徹底避免算術幻覺：
 - **核心教學**：[`01_math_solver.py`](./code_execution/01_math_solver.py)（數學運算求解）、[`02_currency_calculator.py`](./code_execution/02_currency_calculator.py)（CSV 匯率運算）、[`03_matplotlib_plotter.py`](./code_execution/03_matplotlib_plotter.py)（Matplotlib 動態繪圖）、[`04_image_zoom_inspection.py`](./code_execution/04_image_zoom_inspection.py)（圖片程式碼局部裁切）
 - **實務整合**：[`app_telegram_bot.py`](./code_execution/app_telegram_bot.py)（Telegram 運算 Bot）、[`app_gradio.py`](./code_execution/app_gradio.py)（Gradio 沙盒工作台）、[`app_streamlit.py`](./code_execution/app_streamlit.py)（Streamlit 演算儀表板）、[`app_fastapi.py`](./code_execution/app_fastapi.py)（FastAPI 沙盒 API）
 - **互動筆記**：[`math_and_code_execution.ipynb`](./code_execution/math_and_code_execution.ipynb)、[`currency_calculator.ipynb`](./code_execution/currency_calculator.ipynb)
 
-#### [7. 函式呼叫 (function_calling)](./function_calling)
+#### [7. 函式呼叫 (function_calling)](./function_calling/README.md)
 讓模型連接外部 API 與工具，自動識別意圖、提取參數並執行動作：
 - **核心教學**：[`01_meeting_scheduler.py`](./function_calling/01_meeting_scheduler.py)（會議預約 4 步驟）、[`02_weather_assistant.py`](./function_calling/02_weather_assistant.py)（即時天氣查詢）、[`03_parallel_function_calling.py`](./function_calling/03_parallel_function_calling.py)（多工具平行呼叫）、[`04_multi_tool_search_and_function.py`](./function_calling/04_multi_tool_search_and_function.py)（聯網 + 自訂工具混合）
 - **實務整合**：[`app_telegram_bot.py`](./function_calling/app_telegram_bot.py)（Telegram 工具管家）、[`app_gradio.py`](./function_calling/app_gradio.py)（Gradio 智慧控制台）、[`app_streamlit.py`](./function_calling/app_streamlit.py)（Streamlit 管家儀表板）、[`app_fastapi.py`](./function_calling/app_fastapi.py)（FastAPI 工具 API）
@@ -189,7 +189,7 @@ print(interaction.output_text)
 
 ### 🧠 第四階段：企業級記憶與 RAG 檢索（海量資料庫）
 
-#### [8. 向量檢索 (embeddings)](./embeddings/document_search)
+#### [8. 向量檢索 (embeddings)](./embeddings/document_search/README.md)
 將文字內容轉為語意向量，支援 `gemini-embedding-001`、Matryoshka (MRL) 維度縮減與非對稱檢索：
 - **核心教學**：[`01_gemini_semantic_similarity.py`](./embeddings/document_search/01_gemini_semantic_similarity.py)（語意相似度）、[`02_gemini_document_retrieval.py`](./embeddings/document_search/02_gemini_document_retrieval.py)（非對稱檢索）、[`03_dimension_reduction.py`](./embeddings/document_search/03_dimension_reduction.py)（Matryoshka 維度縮減）、[`04_document_search_e5.py`](./embeddings/document_search/04_document_search_e5.py)（開源 E5 模型）
 - **實務整合**：[`app_telegram_bot.py`](./embeddings/document_search/app_telegram_bot.py)（Telegram 知識庫 Bot）、[`app_gradio.py`](./embeddings/document_search/app_gradio.py)（Gradio 相似度工作台）、[`app_streamlit.py`](./embeddings/document_search/app_streamlit.py)（Streamlit 語意搜尋儀表板）、[`app_fastapi.py`](./embeddings/document_search/app_fastapi.py)（FastAPI 向量 API）
@@ -199,12 +199,12 @@ print(interaction.output_text)
 
 ### 🚀 第五階段：綜合架構與生態拓展（融會貫通）
 
-#### [9. 何謂 AI Agent (何謂AIAgent)](./何謂AIAgent)
+#### [9. 何謂 AI Agent (何謂AIAgent)](./何謂AIAgent/README.md)
 代理觀念與工作流設計模式，探討 LLM 工作流與自主代理人的本質區別。
 - 涵蓋設計模式：Prompt chaining、Routing、Parallelization、Orchestrator-workers、Evaluator-optimizer
 - 核心手冊：[`README.md`](./何謂AIAgent/README.md)
 
-#### [10. 開源模型 (開源模型)](./開源模型)
+#### [10. 開源模型 (開源模型)](./開源模型/README.md)
 整合 Hugging Face Serverless Inference API，調用開源大語言模型（如 Mistral-Nemo-Instruct）進行文字生成與摘要任務。
 - [`text_to_summarization.py`](./開源模型/text_to_summarization.py)：Hugging Face 模型文字摘要實作
 - [`test.ipynb`](./開源模型/test.ipynb)：開源模型調用測試筆記本
