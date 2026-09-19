@@ -1,4 +1,4 @@
-# Gemini API 應用實戰指南
+# Gemini AI Agent 開發工具箱與實戰
 
 本專案全面介紹與實作 **Google Gemini API**，示範如何將 Google 最新的 Gemini 3 世代大語言模型與強大工具整合到各類 Python 應用程式與 AI Agent 工作流程中。
 
