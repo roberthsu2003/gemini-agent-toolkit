@@ -18,6 +18,7 @@
 
 ```
 Gemini-API/
+├── line_bot/                  # 0. LINE 機器人連線與 AI 助理串接
 ├── telegram_bot/              # 0. Telegram 機器人連線與 AI 助理串接
 ├── text_generation/          # 1. 文字生成（單輪、串流、Chat、Thinking）
 ├── image_generation/         # 2. 圖像生成（Imagen 3、比例控制、多模態）
@@ -35,6 +36,14 @@ Gemini-API/
 ---
 
 ## 各章節重點檔案
+
+### 0. line_bot (LINE 機器人)
+- `README.md`：LINE Bot 連線完整指南（涵蓋 Messaging API 申請、Webhook 簽章驗證、ngrok 本機穿牆、Gemini AI 串接）
+- `01_basic_bot.py`：FastAPI Webhook 基礎架構、簽章驗證、加好友歡迎事件與 Echo 回覆
+- `02_gemini_bot.py`：串接 Gemini 3.7 Flash Interactions API、Loading 動畫狀態提示、繁中 AI 私聊
+- `03_broadcast_message.py`：全方位主動推播（Push 單人推播、Multicast 多人推播、Broadcast 全好友廣播）
+- `04_rich_broadcast.py`：圖文訊息與現代化 Flex Message 氣泡卡片推播
+- `05_gemini_sentiment_analysis.py`：Gemini 客服情緒分析核心（Pydantic 結構化輸出、4 種情緒與真人接手判斷）
 
 ### 0. telegram_bot (Telegram 機器人)
 - `README.md`：Telegram Bot 連線完整指南（涵蓋 Token 申請、Polling 輪詢機制、Webhook 生產部署考量、Gemini AI 助理串接）

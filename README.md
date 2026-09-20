@@ -102,6 +102,21 @@ print(interaction.output_text)
 
 ---
 
+## 💬 焦點實務專題：LINE Bot 機器人開發
+
+LINE 是台灣、日本與東南亞普及率最高、商業應用最廣泛的通訊管道（支援 Webhook 事件驅動、Flex Message 現代化卡片、Loading 思考動畫與全方位主動推播）。
+
+👉 **完整教學與手冊請點擊參閱專屬章節**：[**【💬 LINE Bot 連線方式與機器人開發實戰】**](./line_bot/README.md)
+
+### 🔹 基礎教學篇（打穩核心元件觀念）
+- [`01_basic_bot.py`](./line_bot/01_basic_bot.py)：**基礎架構與 Echo**（FastAPI Webhook 機制、簽章驗證、加好友歡迎事件、文字鏡像回覆）
+- [`02_gemini_bot.py`](./line_bot/02_gemini_bot.py)：**Gemini 3.7 AI 私聊**（Interactions API 整合、Loading 動畫狀態提示、繁中流暢回答）
+- [`03_broadcast_message.py`](./line_bot/03_broadcast_message.py)：**全方位主動推播**（向指定 User ID Push、向多名用戶 Multicast、向全體好友 Broadcast）
+- [`04_rich_broadcast.py`](./line_bot/04_rich_broadcast.py)：**圖文與 Flex Message 卡片推播**（發送圖片、ButtonsTemplate 按鈕範本與高質感 Flex Message 氣泡卡片）
+- [`05_gemini_sentiment_analysis.py`](./line_bot/05_gemini_sentiment_analysis.py)：**Gemini 客服情緒分析核心**（純 Python 呼叫結構化 JSON 輸出，辨識 4 種情緒與真人接手標記）
+
+---
+
 ## 📱 焦點實務專題：Telegram Bot 機器人開發
 
 Telegram 是串接大語言模型與 AI Agent 最輕量、好寫且開發體驗極佳的通訊管道（免 Webhook/伺服器、支援本機 Polling 輪詢快速測試、30 秒極速申請 Token）。
