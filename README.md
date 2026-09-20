@@ -1,6 +1,6 @@
 # 🤖 Gemini AI Agent 開發工具箱與實戰
 
-一套專為 Python 開發者與學生打造的 **Google Gemini API** 與 **自主 AI Agent** 完整實戰教學庫。全面涵蓋 Google 最新的 Gemini 3 世代模型、官方推薦的 Interactions API，以及從純 Python 基礎到 Telegram、Gradio、Streamlit 與 FastAPI 的企業級實務整合。
+一套專為 Python 開發者與學生打造的 **Google Gemini API** 與 **自主 AI Agent** 完整實戰教學庫。全面涵蓋 Google 最新的 Gemini 3 世代模型、官方推薦的 Interactions API，以及從純 Python 基礎到 LINE、Telegram、Gradio、Streamlit 與 FastAPI 的企業級實務整合。
 
 ---
 
@@ -16,6 +16,7 @@
 
 - [⚡ 3 步驟快速開始](#-3-步驟快速開始-quick-start)
 - [🧭 核心課程學習地圖（全章節導覽表）](#-核心課程學習地圖全章節導覽表)
+- [💬 焦點實務專題：LINE Bot 機器人開發](#-焦點實務專題line-bot-機器人開發)
 - [📱 焦點實務專題：Telegram Bot 機器人開發](#-焦點實務專題telegram-bot-機器人開發)
 - [🤖 2026 推薦模型指南](#-2026-推薦模型指南)
 - [📚 五大階段詳細章節內容](#-五大階段詳細章節內容)
@@ -35,17 +36,21 @@
 
 ```bash
 # 使用 uv (推薦)
-uv add google-genai pydantic python-dotenv gradio streamlit requests beautifulsoup4 openpyxl python-telegram-bot
+uv add google-genai pydantic python-dotenv gradio streamlit requests beautifulsoup4 openpyxl python-telegram-bot line-bot-sdk fastapi uvicorn
 
 # 或使用 pip
-pip install google-genai pydantic python-dotenv gradio streamlit requests beautifulsoup4 openpyxl python-telegram-bot
+pip install google-genai pydantic python-dotenv gradio streamlit requests beautifulsoup4 openpyxl python-telegram-bot line-bot-sdk fastapi uvicorn
 ```
 
 ### 步驟 2：設定 API Key
 在專案根目錄建立 `.env` 檔案，填入您的金鑰：
 ```env
 GEMINI_API_KEY=your_gemini_api_key_here
-TELEGRAM_BOT_TOKEN=your_telegram_bot_token_here   # 若要運行 Telegram Bot 請填寫
+
+# 通訊軟體機器人金鑰（依需求填寫）
+LINE_CHANNEL_SECRET=your_line_channel_secret_here             # 若要運行 LINE Bot 請填寫
+LINE_CHANNEL_ACCESS_TOKEN=your_line_channel_access_token_here # 若要運行 LINE Bot 請填寫
+TELEGRAM_BOT_TOKEN=your_telegram_bot_token_here               # 若要運行 Telegram Bot 請填寫
 ```
 
 ### 步驟 3：執行第一個範例 (Interactions API)
@@ -85,7 +90,7 @@ print(interaction.output_text)
 
 ## 🧭 核心課程學習地圖（全章節導覽表）
 
-為方便學生快速檢索，全專案 10 大核心章節依照學習曲線整理如下表：
+為方便學生快速檢索，全專案除了包含深入探討 LLM 各項核心能力的 **10 大核心技術章節**，亦在專案下方提供了台灣與全球最受歡迎的 **雙主流通訊軟體實戰專題（[💬 LINE Bot](#-焦點實務專題line-bot-機器人開發) 與 [📱 Telegram Bot](#-焦點實務專題telegram-bot-機器人開發)）**：
 
 | 階段 | 單元名稱 | 核心教學 (純 Python) | 實務整合應用 | 互動筆記本 |
 |---|---|---|---|---|
